@@ -17,7 +17,7 @@ aux :: Int -> Int -> ImagePixels -> FiniteAutomata ImagePixels Int -> FiniteAuto
 aux i j img fa@(FA st sy tf as es) = if i == j then fa else u	-- en que comienzan i y j?
 where dfa :: FiniteAutomata ImagePixels Int			-- Hay que usar i y j?
       dfa = FA {						-- fa@(FA st sy tf as es)  Aclarar esto. Lo inical: st sy tf as es
-      states = Set.union st (Set.fromList imgP) 		--:D more better
+      states = Set.union st (Set.fromList imgP) 		-- :D more better
       , symbol = sy
       , delta = delta'
       , q0 = as
